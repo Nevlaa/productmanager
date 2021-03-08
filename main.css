@@ -12,7 +12,7 @@ h1 {
 h2 {
     font-size: 120%;
     margin: 0;
-    padding: .25em 0 .5em;
+    padding: .5em 0 .25em;
 }
 h1, h2 {
     color: rgb(205, 163, 94);
@@ -24,19 +24,8 @@ ul {
 }
 li {
     margin: 0;
-    padding: 0;
+    padding: .25em;
 }
-
-ul.nav {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-ul.nav li {
-    padding-bottom: 0.5em;
-}
-
 a {
     color: rgb(69, 85, 106);   
     font-weight: bold;
@@ -45,22 +34,34 @@ a {
 a:hover {
     color: blue;
 }
+p {
+    margin: 0;
+    padding: .25em 0;
+}
 
-table {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-td, th {
-    border: 1px dashed black;
-    padding: .2em .5em .2em .5em;
-    vertical-align: top;
-    text-align: left;
-}
 form {
     margin: 0;
 }
+label {
+    width: 8em;
+    padding-right: .5em;
+    padding-bottom: .5em;
+    text-align: right;
+    float: left;
+}
+textarea {
+    width: 25em;
+    margin-bottom: .5em;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    margin: 0;
+    padding: .15em 0;
+}
 br {
-    clear: left;
+    clear: both;
 }
 
 /* the styles for the div tags that divide the page into sections */
@@ -89,7 +90,18 @@ br {
     float: left;
     width: 150px;
 }
-
+#sidebar h2 {
+    padding: 1em 0 .25em;
+}
+#sidebar ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+#sidebar li {
+    margin: 0;
+    padding-bottom: .25em;
+}
 #content {
     float: left;
     width: 500px;
@@ -98,10 +110,11 @@ br {
 #left_column {
     float: left;
     width: 150px;
-    padding-left: 1.5em;
+    padding-left: .5em;
 }
 #right_column {
     float: left;
+    width: 300px;
     padding-left: 1em;
 }
 #footer {
@@ -115,26 +128,66 @@ br {
     font-size: 80%;
     margin: 1em 0;
 }
-
+/********************************************************************
+* Styles for classes
+********************************************************************/
 .right {
     text-align: right;
 }
-
+.left {
+    text-align: left;
+}
 /********************************************************************
-* Additional styles for the Product Manager application
+* Other styles for the Product Manager application
 ********************************************************************/
-#add_product_form {
+#add_edit_product_form {
     margin: .5em 0 2em;
 }
-#add_product_form label {
-    width: 6em;
+#add_edit_product_form label {
+    width: 8em;
     padding-right: 1em;
     padding-bottom: .5em;
+    text-align: right;
     float: left;
 }
-#add_product_form input {
+#add_edit_product_form input {
     float: left;
 }
-#add_product_form input[text] {
-    width: 15em;
+#add_edit_product_form input[text] {
+    width: 25em;
+}
+#add_edit_product_form textarea {
+    width: 25em;
+}
+#edit_button_form {
+    float: left;
+    margin-right: .5em;
+}
+#product_image_column {
+    width: 8em;
+    text-align: center;
+}
+/********************************************************************
+* Styles for the Category Manager application
+********************************************************************/
+#category_table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#category_table td, th {
+    border: 1px dashed black;
+    margin: 0;
+    padding: .2em .5em;
+    vertical-align: center;
+    text-align: left;
+}
+#category_table form {
+        margin: 0;
+}
+#add_category_form  {
+    margin: 0;
+    padding-bottom: 1em;
+}
+#add_category_form input {
+    margin-right: .5em;
 }
