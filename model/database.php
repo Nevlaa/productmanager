@@ -2,10 +2,11 @@
 
 $username = getenv('USERNAME');
 $password = getenv('PASSWORD');
-$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+//$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 try {
-    $db = new PDO("mysql:host=127.0.0.1;dbname=shorsrgh_guitar_shop;port=3306", $username, $password, $options);
+    $db = new PDO('mysql:host=127.0.0.1;dbname=shorsrgh_guitar_shop;port=3306', $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     $error_message = $e->getMessage();
     include 'errors/db_error_connect.php';
