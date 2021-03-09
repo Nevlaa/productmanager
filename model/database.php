@@ -5,7 +5,7 @@ $password = getenv('PASSWORD');
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 try {
-    $db = new PDO("mysql:host=gator3301.hostgator.com;dbname=shorsrgh_guitar_shop;port=3306", $username, $password, $options);
+    $db = new PDO("mysql:host=localhost;dbname=shorsrgh_guitar_shop;port=3306", $username, $password, $options);
 } catch (PDOException $e) {
     $error_message = $e->getMessage();
     include 'errors/db_error_connect.php';
