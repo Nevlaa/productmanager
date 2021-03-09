@@ -3,7 +3,7 @@
 $dsn = getenv('DSN');
 $username = getenv('USERNAME');
 $password = getenv('PASSWORD');
-$options = getenv('OPTIONS');
+$options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 try {
     $db = new PDO($dsn, $username, $password, $options);
